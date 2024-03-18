@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_event_presentation/local/testview.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -26,6 +27,11 @@ class _MyHomePageState extends State<MyHomePage> {
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const LocalView(),
+                    ),
+                  );
                 },
                 child: const Text("OK"),
               ),

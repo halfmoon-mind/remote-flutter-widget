@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 /// For clarity, this example uses the text representation of the sample remote
@@ -13,21 +14,21 @@ import 'package:rfw/formats.dart' show parseLibraryFile;
 import 'package:rfw/rfw.dart';
 
 void main() {
-  runApp(const Example());
+  runApp(const LocalView());
 }
 
 // The "#docregion" comment helps us keep this code in sync with the
 // excerpt in the rfw package's README.md file.
 //
 // #docregion Example
-class Example extends StatefulWidget {
-  const Example({super.key});
+class LocalView extends StatefulWidget {
+  const LocalView({super.key});
 
   @override
-  State<Example> createState() => _ExampleState();
+  State<LocalView> createState() => _LocalViewState();
 }
 
-class _ExampleState extends State<Example> {
+class _LocalViewState extends State<LocalView> {
   final Runtime _runtime = Runtime();
   final DynamicContent _data = DynamicContent();
 

@@ -10,3 +10,5 @@ void main() {
   File('counter_app2.rfw')
       .writeAsBytesSync(encodeLibraryBlob(parseLibraryFile(counterApp2)));
 }
+
+// dart run encode.dart

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_event_presentation/webview.dart';
+import 'package:flutter_event_presentation/webview/webview.dart';
 
 void main() {
   runApp(const MyApp());
