@@ -1,0 +1,14 @@
+import core.widgets;
+import core.material;
+
+widget root = GestureDetector(
+    child: Container(
+        height: 200,
+        color: 0xFF002211,
+        child: Column( 
+            mainAxisAlignment: "center",
+            children: [Text(text: ["Hello, ", data.greet.name, "!"], textDirection: "ltr"),],
+        ),
+    ),
+    onTap: event "greeting" { data: "GO" },
+);    
