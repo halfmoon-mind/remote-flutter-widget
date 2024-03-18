@@ -4,14 +4,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:rfw/rfw.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
-      home: RemoveView(),
+    MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const RemoveView(),
     ),
   );
 }
@@ -60,6 +65,7 @@ class _RemoveViewState extends State<RemoveView> {
     if (targetFile.existsSync()) {
       targetFile.deleteSync();
       targetFileName = secondFileName;
+      targetFile = File(join(home.path, secondFileName));
     }
     final client =
         await (await HttpClient().getUrl(Uri.parse('$baseUrl$targetFileName')))
@@ -76,8 +82,15 @@ class _RemoveViewState extends State<RemoveView> {
   @override
   Widget build(BuildContext context) {
     if (!_ready) {
-      return Container(
-        child: Text("NOT READY"),
+      return const Material(
+        child: Scaffold(
+          body: Center(
+            child: Text(
+              "NOT READY",
+              style: TextStyle(fontSize: 40),
+            ),
+          ),
+        ),
       );
     }
     return RemoteWidget(
@@ -93,6 +106,9 @@ class _RemoveViewState extends State<RemoveView> {
             _counter++;
             _updateData();
           });
+        }
+        if (eventName == "greeting") {
+          Fluttertoast.showToast(msg: "Hello, ${eventArguments['data']}");
         }
       },
     );
