@@ -1,7 +1,7 @@
 import core.widgets;
 import core.material;
 
-widget root = GestureDetector(
+widget Counter = GestureDetector(
     child: Container(
         height: 200,
         color: 0xFF002211,
@@ -11,4 +11,4 @@ widget root = GestureDetector(
         ),
     ),
     onTap: event "greeting" { data: "GO" },
-);    
+);
