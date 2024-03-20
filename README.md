@@ -1,16 +1,11 @@
-# flutter_event_presentation
+# Remote Flutter Widget Example
 
-A new Flutter project.
+- This is a demo code for [rfw](https://pub.dev/packages/rfw)(remote flutter widget) and webview, so you can see examples for Server Driven UI.
+- It makes widget tree dynamically in runtime.
+- You can try each examples, "local", "remote", "webview" in folder.
 
-## Getting Started
+## Local
 
-This project is a starting point for a Flutter application.
+## Remote
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Webview
